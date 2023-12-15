@@ -1,0 +1,8 @@
+// Get the user ID of the person who closed the task
+var userId = current.sys_updated_by;
+
+// Update the "Notes" field of the task with the user ID
+current.notes += "\nUser " + userId + " has been terminated from production environment.";
+
+// Update the record
+current.update();
